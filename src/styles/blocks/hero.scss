@@ -1,0 +1,56 @@
+.hero__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: rem(65px);
+}
+
+.hero__preview {
+    width: rem(451px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: url('./img/icons/drops.svg') center center / contain no-repeat;
+}
+
+.hero__arrow-scroll {
+    width: rem(29px);
+}
+
+.hero__preview-img {
+    width: rem(417px);
+    height: auto;
+}
+
+.hero__title {
+    width: rem(425px);
+    text-transform: uppercase;
+    font-family: Gagalin, sans-serif;
+    font-size: rem(72px);
+    color: $orange;
+    line-height: 0.92em;
+
+    &_font_handwritten {
+        text-transform: none;
+        font-family: Lifehack, sans-serif;
+        font-size: rem(65px);
+        color: #fff;
+        line-height: 1em;
+    }
+}
+
+.hero__arrow-scroll {
+    display: block;
+    width: rem(29px);
+    background-color: transparent;
+    border: 0;
+    margin: 0 auto;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

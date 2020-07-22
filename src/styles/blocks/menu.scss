@@ -1,0 +1,31 @@
+.menu__list {
+    display: flex;
+    align-items: center ;
+}
+
+.menu__item {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: rem(13px);
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: #fff;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        margin-left: 10px;
+    }
+
+    &:last-child {
+        margin: 0;
+
+        &::after {
+            display: none;
+            margin: 0;
+        }
+    }
+}

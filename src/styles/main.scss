@@ -1,0 +1,29 @@
+// functions
+
+@function rem($px){
+    @return $px / $base-font-size + 0rem;
+}
+
+// perem
+
+$container-width: 940px;
+$base-font-size: 14px;
+$tablets: 768px;
+$phones: 480px;
+
+// z-index
+
+$z-container: 5;
+
+// colors
+
+$orange: #f9b43b;
+$darkTitle: #2f3234;
+$btnOrange: #e45028;
+
+// imports
+
+@import "media/media.scss";
+@import "./layout/fonts.scss";
+@import "./layout/base.scss";
+@import "./blocks/*.scss";
