@@ -1,0 +1,71 @@
+.slide__struct {
+    position: absolute;
+    top: rem(-30px);
+    left: 0;
+    display: flex;
+}
+
+.struct__btn {
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: 5px;
+    background-color: rgba($color: #e35028, $alpha: .4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #e35028;
+
+        & ~ .struct__list {
+            opacity: 1;
+            left: rem(90px);
+        }
+    }
+}
+
+.struct__list {
+    width: rem(270px);
+    background-color: rgba($color: #fff, $alpha: .9);
+    border-radius: 5px;
+    padding: rem(18px) rem(22px);
+    color: $darkTitle;
+    position: absolute;
+    left: -999999px;
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    &:hover {
+        opacity: 1;
+        left: rem(90px);
+    }
+}
+
+.struct__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(18px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.struct__icon {
+    width: rem(45px);
+    max-height: rem(45px);
+    margin-right: rem(25px);
+}
+
+.struct__text {
+    font-weight: 500;
+    flex: 1;
+}
+
+.struct__weight {
+    font-weight: 300;
+}

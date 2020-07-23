@@ -1,6 +1,4 @@
 .btn {
-    border: 0;
-    background-color: transparent;
     padding: rem(13px) rem(15px);
     border-radius: 5px;
     font-size: rem(13px);
@@ -11,13 +9,5 @@
 
     &_theme_red {
         background-color: $btnOrange;
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &:hover {
-        cursor: pointer;
     }
 }

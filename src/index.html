@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Burgers</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -46,7 +46,7 @@
                 </div>
             </section>
 
-            <!-- About -->
+            <!-- about -->
 
             <section class="section section__about">
                 <div class="container">
@@ -67,8 +67,9 @@
                                 <img src="./img/icons/hand.svg" alt="hand" class="dignity__icon-img">
                             </div>
                             <div class="dignity__content">
-                                <h4>Ручная  сборка</h4>
-                                <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+                                <h4>Ручная сборка</h4>
+                                <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                    Первое полустишие притягивает сюжетный реформаторский пафос.</p>
                             </div>
                         </li>
                         <li class="dignities__item dignity">
@@ -78,6 +79,173 @@
                             <div class="dignity__content">
                                 <h4>Натуральные ингредиенты</h4>
                                 <p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- slider -->
+
+            <section class="section section__slider">
+                <div class="container">
+                    <button class="slider__arrow slider__arrow_prev">
+                        <img src="./img/icons/arrow-scroll.svg" alt="prev" class="slider__arrow-img">
+                    </button>
+                    <ul class="slider">
+                        <li class="slide">
+                            <div class="slide__struct">
+                                <div class="struct__btn">
+                                    <div class="struct__photo">
+                                        <img src="./img/icons/burger.svg" alt="burger" class="struct__photo-img">
+                                    </div>
+                                    <div class="struct__title">состав</div>
+                                </div>
+                                <ul class="struct__list">
+                                    <li class="struct__item">
+                                        <div class="struct__icon">
+                                            <img src="./img/icons/beef.svg" alt="beef" class="struct__icon-img">
+                                        </div>
+                                        <div class="struct__text">Говядина</div>
+                                        <div class="struct__weight">300 г</div>
+                                    </li>
+                                    <li class="struct__item">
+                                        <div class="struct__icon">
+                                            <img src="./img/icons/buns.svg" alt="buns" class="struct__icon-img">
+                                        </div>
+                                        <div class="struct__text">Булочки</div>
+                                        <div class="struct__weight">100 г</div>
+                                    </li>
+                                    <li class="struct__item">
+                                        <div class="struct__icon">
+                                            <img src="./img/icons/salad.svg" alt="salad" class="struct__icon-img">
+                                        </div>
+                                        <div class="struct__text">Зелень</div>
+                                        <div class="struct__weight">70 г</div>
+                                    </li>
+                                    <li class="struct__item">
+                                        <div class="struct__icon">
+                                            <img src="./img/icons/sauce.svg" alt="sauce" class="struct__icon-img">
+                                        </div>
+                                        <div class="struct__text">Соус</div>
+                                        <div class="struct__weight">150 г</div>
+                                    </li>
+                                    <li class="struct__item">
+                                        <div class="struct__icon">
+                                            <img src="./img/icons/cucumber.svg" alt="vegetables"
+                                                class="struct__icon-img">
+                                        </div>
+                                        <div class="struct__text">Овощи</div>
+                                        <div class="struct__weight">200 г</div>
+                                    </li>
+                                    <li class="struct__item">
+                                        <div class="struct__icon">
+                                            <img src="./img/icons/cheese.svg" alt="cheese" class="struct__icon-img">
+                                        </div>
+                                        <div class="struct__text">Сыр</div>
+                                        <div class="struct__weight">80 г</div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="slide__kcal">
+                                <div class="slide__kcal-icon">
+                                    <img src="./img/icons/kkal.svg" alt="kcal" class="slide__kcal-img">
+                                </div>
+                                <div class="slide__kcal-value">1200</div>
+                                <div class="slide__kcal-text">ккал</div>
+                            </div>
+                            <div class="slide__photo">
+                                <img src="./img/burgerOnSlider.png" alt="Dark Burger" class="slide__photo-img">
+                            </div>
+                            <div class="slide__content">
+                                <h2>Dark BEEF Burger</h2>
+                                <p>Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                                    нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с
+                                    добавлением экзотического соуса чураско.</p>
+                                <div class="slide__order">
+                                    <div>
+                                        500
+                                        <span>Рублей</span>
+                                    </div>
+                                    <button class="btn btn_theme_red">Заказать</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="slider__arrow slider__arrow_next">
+                        <img src="./img/icons/arrow-scroll.svg" alt="next" class="slider__arrow-img">
+                    </button>
+                </div>
+            </section>
+
+            <!-- team -->
+
+            <section class="section section__team">
+                <div class="container">
+                    <h2 class="section__title section__title_color_orange section__title_text-align_left">Команда</h2>
+                    <ul class="team__list">
+                        <li class="team__item teammate">
+                            <button class="teammate__btn">
+                                <span class="teammate__name">Дэниэл Редклиф</span>
+                            </button>
+                            <div class="teammate__wrapper">
+                                <div class="teammate__about">
+                                    <div class="teammate__photo">
+                                        <img src="./img/teammate.jpg" alt="teammate" class="teammate__photo-img">
+                                    </div>
+                                    <div class="teammate__desc">
+                                        <div>Оператор</div>
+                                        <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item teammate team__item_active">
+                            <button class="teammate__btn">
+                                <span class="teammate__name">Ричард Джеймс</span>
+                            </button>
+                            <div class="teammate__wrapper">
+                                <div class="teammate__about">
+                                    <div class="teammate__photo">
+                                        <img src="./img/teammate.jpg" alt="teammate" class="teammate__photo-img">
+                                    </div>
+                                    <div class="teammate__desc">
+                                        <div>Оператор</div>
+                                        <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item teammate">
+                            <button class="teammate__btn">
+                                <span class="teammate__name">Джейк Финн</span>
+                            </button>
+                            <div class="teammate__wrapper">
+                                <div class="teammate__about">
+                                    <div class="teammate__photo">
+                                        <img src="./img/teammate.jpg" alt="teammate" class="teammate__photo-img">
+                                    </div>
+                                    <div class="teammate__desc">
+                                        <div>Оператор</div>
+                                        <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__item teammate">
+                            <button class="teammate__btn">
+                                <span class="teammate__name">Николай Иванов</span>
+                            </button>
+                            <div class="teammate__wrapper">
+                                <div class="teammate__about">
+                                    <div class="teammate__photo">
+                                        <img src="./img/teammate.jpg" alt="teammate" class="teammate__photo-img">
+                                    </div>
+                                    <div class="teammate__desc">
+                                        <div>Оператор</div>
+                                        <p>С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>

@@ -2,7 +2,16 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, button, ul, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+ul,
+li {
   padding: 0;
   margin: 0;
 }
@@ -35,6 +44,10 @@ body {
   color: #fff;
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 .container {
   width: 95%;
   height: 100%;
@@ -64,4 +77,17 @@ a {
   text-decoration: none;
   color: inherit;
   transition: all .3s ease;
+}
+
+button {
+  background: transparent;
+  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }

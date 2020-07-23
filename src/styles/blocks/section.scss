@@ -10,6 +10,14 @@
     color: $darkTitle;
     text-align: center;
     margin-bottom: rem(55px);
+
+    &_color_orange {
+        color: #f9b43b;
+    }
+
+    &_text-align_left {
+        text-align: left;
+    }
 }
 
 .section__hero {
@@ -31,4 +39,29 @@
 
 .section__about {
     background: url('./img/aboutBG.jpg') top center / cover no-repeat;
+}
+
+.section__slider {
+    background: linear-gradient(to bottom, #f9b43b 24%, #eb8c38 48%, #f9b43b 74%);
+
+    & .container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.section__team {
+    position: relative;
+    padding: 0;
+    background: url('./img/teamBG.jpg') top center / cover no-repeat;
+
+    & .container {
+        width: rem(542px);
+        padding: rem(97px);
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        background-color: rgba($color: $darkTitle, $alpha: .93);
+    }
 }
