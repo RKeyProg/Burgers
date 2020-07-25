@@ -1,0 +1,54 @@
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__column {
+    width: calc(100%/2 - 10px);
+    max-width: rem(460px);
+}
+
+.form__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: rem(19px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &_jcontent_fstart {
+        justify-content: flex-start;
+    }
+}
+
+.form__label {
+    width: 100%;
+
+    &_width_half {
+        width: rem(221px);
+    }
+
+    &_width_quarter {
+        width: rem(100px);
+    }
+}
+
+.form__controls {
+    display: flex;
+    align-items: center;
+    margin: 0 rem(16px) 5px 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__btn-clear {
+    display: inline-block;
+    font-weight: 300;
+    color: #fff;
+
+}

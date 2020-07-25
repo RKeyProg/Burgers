@@ -1,0 +1,40 @@
+.accordion {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+}
+
+.accordion__btn {
+    position: relative;
+    width: rem(80px);
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: rem(30px);
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba($color: #000, $alpha: .6);
+    }
+
+    & h3 {
+        transform: rotate(-90deg) translateX(50%);
+        font-family: Gagalin, sans-serif;
+        font-size: rem(40px);
+        color: #fff;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+}

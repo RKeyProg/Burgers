@@ -1,6 +1,7 @@
 .section {
     height: 100vh;
     padding: rem(113px) 0;
+    position: relative;
 }
 
 .section__title {
@@ -13,6 +14,10 @@
 
     &_color_orange {
         color: #f9b43b;
+    }
+
+    &_color_white {
+        color: #fff;
     }
 
     &_text-align_left {
@@ -64,4 +69,28 @@
         height: 100%;
         background-color: rgba($color: $darkTitle, $alpha: .93);
     }
+}
+
+.section__menu {
+    background: url('./img/accordionBG.jpg') top center / cover no-repeat;
+
+    & .container {
+        position: static;
+        height: auto;
+    }
+}
+
+.section__people-about {
+    padding: 0;
+
+    & .container {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+}
+
+
+.section__form {
+    background: url('./img/formBG.png') center center / cover no-repeat, url('./img/formMaskBG.jpg') center center / cover no-repeat;
 }

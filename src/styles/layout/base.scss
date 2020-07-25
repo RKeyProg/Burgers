@@ -11,7 +11,8 @@ h6,
 p,
 button,
 ul,
-li {
+li,
+input {
   padding: 0;
   margin: 0;
 }
@@ -79,9 +80,10 @@ a {
   transition: all .3s ease;
 }
 
-button {
+button, input[type=reset] {
   background: transparent;
   border: 0;
+  -webkit-tap-highlight-color: transparent; //без синего фона при нажатии
 
   &:focus {
     outline: none;

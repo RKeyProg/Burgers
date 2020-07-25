@@ -10,4 +10,12 @@
     &_theme_red {
         background-color: $btnOrange;
     }
+
+    &_theme_dark {
+        background-color: $darkTitle;
+    }
+
+    &_margine_right {
+        margin-right: rem(20px);
+    }
 }

@@ -1,0 +1,28 @@
+.label__title {
+    font-size: rem(14px);
+    font-weight: 300;
+    margin-bottom: 7px;
+}
+
+.label__input {
+    height: rem(36px);
+}
+
+.label__textarea {
+    height: rem(114px);
+    resize: none;
+}
+
+.label__input, .label__textarea {
+    width: 100%;
+    font-weight: 300;
+    line-height: 1.71;
+    border-radius: 5px;
+    border: solid 1px #d1cfcb;
+    padding: rem(12px) rem(21px);
+
+    &:focus {
+        outline: none;
+        border: solid 2px #f9b43b;
+    }
+}
