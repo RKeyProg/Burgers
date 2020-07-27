@@ -90,6 +90,13 @@
     }
 }
 
+.section__video {
+    background: url('./img/videoBG.jpg') center center / cover no-repeat;
+
+    & .section__title {
+        margin-bottom: rem(50px);
+    }
+}
 
 .section__form {
     background: url('./img/formBG.png') center center / cover no-repeat, url('./img/formMaskBG.jpg') center center / cover no-repeat;

@@ -1,0 +1,336 @@
+.player__container {
+    width: rem(660px);
+    height: rem(405px);
+    margin: 0 auto;
+
+    &::before {
+        content: '';
+        display: block;
+        background: url('./img/sheet7.webp') center center/ cover no-repeat;
+        position: absolute;
+        left: 0;
+        bottom: -50px;
+        width: 9%;
+        height: 27%;
+
+        @include tablets {
+            bottom: 85px;
+            width: 7%;
+            height: 18%;
+        }
+
+        @include phones {
+            bottom: -50px;
+            width: 10%;
+            height: 24%;
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background: url('./img/sheet8.webp') center center/ cover no-repeat;
+        position: absolute;
+        right: 35px;
+        top: 45px;
+        width: 10%;
+        height: 13%;
+
+        @include tablets {
+            right: 5px;
+            top: 45px;
+        }
+    }
+
+    @include tablets {
+        width: 77.5vw;
+        height: 53vmin;
+    }
+}
+
+
+.player__wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.player__elem {
+    width: 100%;
+    height: 100%;
+}
+
+.player__splash {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url("./img/playerPreview.webp") center center / cover no-repeat;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        & .player__splash-play {
+            opacity: 1;
+        }
+    }
+}
+
+.player__splash-play {
+    width: rem(82px);
+    height: rem(118px);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .9;
+    fill: #fff;
+    transition: all .3s ease;
+
+    @include tablets {
+        width: rem(73px);
+        height: rem(106px);
+    }
+
+    @include phones {
+        width: rem(49px);
+        height: rem(71px);
+    }
+}
+
+.player__controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: rem(35px);
+    background-color: #3e3e3e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 rem(25px);
+
+    @include tablets {
+        padding: 0 rem(21px);
+    }
+
+    @include phones {
+        padding: 0 rem(12px);
+    }
+}
+
+.player__start {
+    padding: 0;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    width: rem(16px);
+    height: rem(22px);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include tablets {
+        width: rem(14px);
+        height: rem(20px);
+    }
+
+    @include phones {
+        width: rem(10px);
+        height: rem(13px);
+    }
+}
+
+.player__start-play {
+    width: 100%;
+    height: 100%;
+    fill: #626262;
+}
+
+.player__playback,
+.player__volume {
+    position: relative;
+
+    &::before {
+        content: '';
+        height: 4px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        background-color: #626262;
+
+        @include phones {
+            height: 3px;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.player__playback-button,
+.player__volume-button {
+    position: absolute;
+    top: 50%;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    background-color: #626262;
+    width: rem(13px);
+    height: rem(13px);
+    transform: translate(-50%, -50%);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include tablets {
+        width: rem(11px);
+        height: rem(11px);
+    }
+
+    @include tablets {
+        width: rem(8px);
+        height: rem(8px);
+    }
+}
+
+.player__playback {
+    width: rem(444px);
+
+    @include tablets {
+        width: 66.9%;
+    }
+}
+
+.player__playback-button {
+    left: 0;
+}
+
+.player__speaker {
+    height: rem(22px);
+    display: flex;
+
+    @include tablets {
+        height: rem(20px);
+    }
+
+    @include phones {
+        height: rem(13px);
+    }
+}
+
+.player__speaker-btn {
+    padding: 0;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    margin-right: rem(19px);
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    @include tablets {
+        margin-right: rem(16px);
+    }
+
+    @include tablets {
+        margin-right: rem(11px);
+    }
+}
+
+.player__speaker-img {
+    width: rem(18px);
+    height: 100%;
+    fill: #626262;
+}
+
+.player__volume {
+    width: rem(58px);
+
+    @include tablets {
+        width: rem(53px);
+    }
+
+    @include phones {
+        width: rem(36px);
+    }
+}
+
+.player__volume-button {
+    left: 100%;
+}
+
+.player {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+    background-color: #000;
+
+    & button {
+        line-height: 0;
+    }
+
+    &.paused {
+        .player__start {
+            border: none;
+            border-radius: 0;
+
+            &::after,
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 35%;
+                top: 0;
+                bottom: 0;
+                background: #626262;
+            }
+
+            &::after {
+                right: 0;
+            }
+
+            &::before {
+                left: 0;
+            }
+        }
+
+        .player__start-play {
+            fill: transparent;
+        }
+    }
+
+    &.active .player__splash {
+        display: none;
+    }
+}

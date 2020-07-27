@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burgers</title>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.min.css">
 </head>
 
 <body>
@@ -18,7 +18,9 @@
                 <div class="container container_jcontent_sb">
                     <header class="header">
                         <a href="#" class="header__logo">
-                            <img src="./img/icons/logo.svg" alt="Burger" class="header__logo-img">
+                            <svg class="header__logo-img">
+                                <use xlink:href="./img/icons/sprite.svg#logo"></use>
+                            </svg>
                         </a>
                         <ul class="menu__list">
                             <li class="menu__item"><a href="#" class="menu__link">О нас</a></li>
@@ -40,9 +42,11 @@
                             <span class="hero__title_font_handwritten">натуральные бургеры</span>
                         </h1>
                     </div>
-                    <butto class="hero__arrow-scroll">
-                        <img src="./img/icons/arrow-scroll.svg" alt="Scroll" class="hero__arrow-scroll-img">
-                    </butto>
+                    <button class="hero__arrow-scroll">
+                        <svg class="hero__arrow-scroll-img">
+                            <use xlink:href="./img/icons/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
                 </div>
             </section>
 
@@ -54,7 +58,9 @@
                     <ul class="dignities__list">
                         <li class="dignities__item dignity">
                             <div class="dignity__icon">
-                                <img src="./img/icons/meat.svg" alt="meat" class="dignity__icon-img">
+                                <svg class="dignity__icon-img dignity__icon-img_fill_red">
+                                    <use xlink:href="./img/icons/sprite.svg#meat"></use>
+                                </svg>
                             </div>
                             <div class="dignity__content">
                                 <h4>100% свежее мясо</h4>
@@ -64,7 +70,9 @@
                         </li>
                         <li class="dignities__item dignity">
                             <div class="dignity__icon">
-                                <img src="./img/icons/hand.svg" alt="hand" class="dignity__icon-img">
+                                <svg class="dignity__icon-img dignity__icon-img_fill_yellow">
+                                    <use xlink:href="./img/icons/sprite.svg#hand"></use>
+                                </svg>
                             </div>
                             <div class="dignity__content">
                                 <h4>Ручная сборка</h4>
@@ -74,7 +82,9 @@
                         </li>
                         <li class="dignities__item dignity">
                             <div class="dignity__icon">
-                                <img src="./img/icons/natural.svg" alt="natural" class="dignity__icon-img">
+                                <svg class="dignity__icon-img dignity__icon-img_fill_green">
+                                    <use xlink:href="./img/icons/sprite.svg#natural"></use>
+                                </svg>
                             </div>
                             <div class="dignity__content">
                                 <h4>Натуральные ингредиенты</h4>
@@ -370,7 +380,41 @@
 
             <section class="section section__video">
                 <div class="container">
-
+                    <h2 class="section__title">Как мы работаем</h2>
+                    <div class="player__container">
+                        <div class="player">
+                            <div class="player__wrapper">
+                                <video id="yt-player" class="player__elem">
+                                    <source src="./video/videoplayback.mp4">
+                                </video>
+                                <div class="player__splash">
+                                    <svg class="player__splash-play">
+                                        <use xlink:href="./img/icons/sprite.svg#play"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="player__controls">
+                                <button class="player__start">
+                                    <svg class="player__start-play">
+                                        <use xlink:href="./img/icons/sprite.svg#play"></use>
+                                    </svg>
+                                </button>
+                                <div class="player__playback">
+                                    <button class="player__playback-button"></button>
+                                </div>
+                                <div class="player__speaker">
+                                    <button class="player__speaker-btn">
+                                        <svg class="player__speaker-img">
+                                            <use xlink:href='./img/icons/sprite.svg#volume'></use>
+                                        </svg>
+                                    </button>
+                                    <div class="player__volume">
+                                        <button class="player__volume-button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -453,6 +497,8 @@
 
         </div>
     </div>
+
+    <script src="main.min.js"></script>
 </body>
 
 </html>

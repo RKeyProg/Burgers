@@ -7,4 +7,13 @@
 .header__logo {
     display: block;
     width: rem(92px);
+    height: rem(69px);
+}
+
+.header__logo-img { 
+    width: 100%;
+    height: 100%;
+    --up-color: #E55028;
+    --down-color: #F9B43B;
+    --dot-color: #8BC334;
 }
