@@ -2,7 +2,7 @@
     display: none;
 
     &:checked {
-        & ~ .controls__icon::after {
+        & ~ .controls__icon::after, ~ .controls__icon .controls__icon_type_check {
             display: block;
         }
     }
@@ -26,18 +26,15 @@
             width: 7px;
             height: 7px;
             border-radius: 50%;
-            background-color: $btnOrange;
+            background-color: $red;
         }
     }
 
     &_type_check {
-        &::after {
-            content: '';
-            display: none;
-            width: 9px;
-            height: 7px;
-            background: url('./img/icons/checkmark.svg') center center / cover no-repeat;
-        }
+        display: none;
+        width: 10px;
+        height: 8px;
+        fill: $red;
     }
 }
 

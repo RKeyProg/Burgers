@@ -15,6 +15,10 @@
     }
 }
 
+.slider__arrow-img {
+    fill: #fff;
+}
+
 .slide {
     display: flex;
     justify-content: space-between;
@@ -36,6 +40,10 @@
     height: rem(60px);
     opacity: .5;
     margin-bottom: 5px;
+}
+
+.slide__kcal-img {
+    fill: #fff;
 }
 
 .slide__kcal-value {
@@ -84,7 +92,7 @@
     & div {
         font-family: Gagalin, sans-serif;
         font-size: rem(72px);
-        color: $btnOrange;
+        color: $red;
         margin-right: rem(29px);
     }
 

@@ -27,6 +27,12 @@
     }
 }
 
+.struct__photo-img {
+    width: rem(46px);
+    height: rem(44px);
+    fill: #fff;
+}
+
 .struct__list {
     width: rem(270px);
     background-color: rgba($color: #fff, $alpha: .9);
@@ -57,8 +63,24 @@
 
 .struct__icon {
     width: rem(45px);
-    max-height: rem(45px);
     margin-right: rem(25px);
+}
+
+.struct__icon-img {
+    width: 100%;
+    max-height: rem(45px);
+
+    &_fill_red {
+        fill: $red;
+    }
+
+    &_fill_orange {
+        fill: $orange;
+    }
+
+    &_fill_green {
+        fill: $green;
+    }
 }
 
 .struct__text {

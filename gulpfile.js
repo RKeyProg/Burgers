@@ -18,7 +18,7 @@ const cssmin = require('gulp-cssmin');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify-es').default;
-const svgo = require('gulp-svgo');
+const cheerio = require('gulp-cheerio');
 const svgSprite = require('gulp-svg-sprite');
 const gulpif = require('gulp-if');
 
@@ -59,7 +59,7 @@ task('copy:img', () => {
 });
 
 task('copy:svg', () => {
-    return src([`${SRC_PATH}/img/icons/sprite.svg`]).pipe(dest(`${DIST_PATH}/img/icons`)).pipe(reload({
+    return src([`${SRC_PATH}/img/icons/logo.svg`]).pipe(dest(`${DIST_PATH}/img/icons`)).pipe(reload({
         stream: true
     }));
 });
@@ -113,24 +113,27 @@ task('scripts', () => {
         }));
 })
 
-// task('icons', () => {
-//     return src(`${SRC_PATH}/img/icons/*.svg`)
-//         .pipe(svgo({
-//             plugins: [{
-//                 removeAttrs: {
-//                     attrs: "(data.*)"
-//                 }
-//             }]
-//         }))
-//         .pipe(svgSprite({
-//             mode: {
-//                 symbol: {
-//                     sprite: "../sprite.svg"
-//                 }
-//             }
-//         }))
-//         .pipe(dest(`${DIST_PATH}/img/icons`));
-// })
+task('create:sprite', () => {
+    return src(`${SRC_PATH}/img/icons/*.svg`)
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            },
+            parserOptions: {
+                xmlMode: true
+            }
+        }))
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: "../sprite.svg"
+                }
+            }
+        }))
+        .pipe(dest(`${DIST_PATH}/img/icons`));
+})
 
 task('server', () => {
     browserSync.init({
@@ -145,13 +148,11 @@ task('watch', () => {
     watch(`./${SRC_PATH}/styles/**/*.scss`, series('sass', 'styles'));
     watch(`./${SRC_PATH}/*.html`, series('copy:html'));
     watch(`./${SRC_PATH}/scripts/**/*.js`, series('scripts'));
-    // watch(`./${SRC_PATH}/img/icons/**/*.svg`, series('icons'));
+    watch(`./${SRC_PATH}/img/icons/**/*.svg`, series('create:sprite'));
 })
 
 task('default', series('clean', 'sass',
-    parallel('copy:html', 'copy:img', 'copy:svg', 'copy:video', 'styles', 'scripts'), parallel('watch', 'server'))
-);
+    parallel('copy:html', 'copy:img', 'copy:svg', 'create:sprite', 'copy:video', 'styles', 'scripts'), parallel('watch', 'server')));
 
 task('build', series('clean', 'sass',
-    parallel('copy:html', 'copy:img', 'copy:svg', 'copy:video', 'styles', 'scripts'))
-);
+    parallel('copy:html', 'copy:img', 'copy:svg', 'create:sprite', 'copy:video', 'styles', 'scripts')));
