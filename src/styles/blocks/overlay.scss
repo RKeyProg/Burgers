@@ -1,0 +1,28 @@
+.overlay {
+    background-color: #fff;
+    padding: rem(35px) rem(25px);
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 40px #000;
+}
+
+.overlay__text {
+    font-size: rem($base-font-size);
+    font-weight: 300;
+    color: #000;
+    margin-bottom: rem(20px);
+}
+
+.error-message .overlay__text {
+    color: red;
+}
+
+.app-supmit-btn:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.fancybox-active {
+    height: 100%;
+}

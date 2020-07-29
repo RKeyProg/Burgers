@@ -1,20 +1,32 @@
+.team__list {
+    height: 100%;
+}
+
 .team__item {
-    margin-bottom: rem(40px);
+    margin-bottom: rem(22px);
 
     &_active {
         & .teammate__name {
             color: $orange;
-
-            &::before {
-                border-bottom: 7px solid $orange;
-                border-top: 0;
-            }
-        }
-
-        & .teammate__wrapper {
-            height: auto;
         }
     }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.teammate__btn {
+    display: flex;
+    align-items: center;
+}
+
+.teammate__triangle {
+    border: 5px solid transparent;
+    border-top: 7px solid $orange;
+    border-bottom: 0;
+    margin-right: 10px;
+    transition: transform .3s ease;
 }
 
 .teammate__name {
@@ -24,24 +36,16 @@
     display: flex;
     align-items: center;
     color: #fff;
-
-    &::before {
-        content: '';
-        display: inline-block;
-        border: 5px solid transparent;
-        border-top: 7px solid $orange;
-        border-bottom: 0;
-        margin-right: 10px;
-    }
 }
 
 .teammate__wrapper {
     height: 0;
+    padding: rem(18px) 0 0 rem(20px);
     overflow: hidden;
+    transition: all .3s ease;
 }
 
 .teammate__about {
-    padding: rem(18px) 0 0 rem(20px);
     display: flex;
     align-items: center;
 }

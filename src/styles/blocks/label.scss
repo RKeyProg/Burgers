@@ -25,4 +25,8 @@
         outline: none;
         border: solid 2px #f9b43b;
     }
+
+    &_error {
+        border: solid 2px $red;
+    }
 }

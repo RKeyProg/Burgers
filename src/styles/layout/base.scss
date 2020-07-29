@@ -82,6 +82,9 @@ a {
 
 button, input[type=reset] {
   background: transparent;
+}
+
+button, input[type=reset], input[type=submit] {
   border: 0;
   -webkit-tap-highlight-color: transparent; //без синего фона при нажатии
 

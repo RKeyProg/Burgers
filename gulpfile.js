@@ -59,7 +59,7 @@ task('copy:img', () => {
 });
 
 task('copy:svg', () => {
-    return src([`${SRC_PATH}/img/icons/logo.svg`]).pipe(dest(`${DIST_PATH}/img/icons`)).pipe(reload({
+    return src([`${SRC_PATH}/img/icons/logo.svg`, `${SRC_PATH}/img/icons/map-marker.svg`]).pipe(dest(`${DIST_PATH}/img/icons`)).pipe(reload({
         stream: true
     }));
 });
